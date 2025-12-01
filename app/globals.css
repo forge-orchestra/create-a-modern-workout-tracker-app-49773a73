@@ -1,0 +1,86 @@
+import 'tailwindcss/tailwind.css';
+
+:root {
+  --primary-color: #1f2937;
+  --secondary-color: #3b82f6;
+  --background-color: #f9fafb;
+  --text-color: #111827;
+  --accent-color: #f97316;
+}
+
+body {
+  @apply bg-background-color text-text-color font-sans;
+}
+
+.container {
+  @apply mx-auto px-4;
+}
+
+.button {
+  @apply bg-secondary-color text-white font-bold py-2 px-4 rounded hover:bg-blue-700;
+}
+
+.card {
+  @apply bg-white shadow-md rounded-lg overflow-hidden;
+}
+
+.card-header {
+  @apply bg-primary-color text-white p-4;
+}
+
+.card-body {
+  @apply p-4;
+}
+
+.icon {
+  @apply inline-block align-middle;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  @apply border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-secondary-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold;
+}
+
+a {
+  @apply text-secondary-color hover:text-accent-color;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+
+.hidden {
+  @apply hidden;
+}
+
+.visible {
+  @apply block;
+}
+
+@media (min-width: 640px) {
+  .sm\:flex {
+    @apply flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:flex {
+    @apply flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:flex {
+    @apply flex;
+  }
+}
